@@ -9,6 +9,7 @@ module chat.local.javalocalchat {
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
     requires pgplib;
+    requires annotations;
 
     opens chat.local.javalocalchat to javafx.fxml;
     exports chat.local.javalocalchat;
