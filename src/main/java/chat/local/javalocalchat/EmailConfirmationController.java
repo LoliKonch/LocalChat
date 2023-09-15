@@ -9,7 +9,7 @@ import javafx.scene.layout.Pane;
 /**
  * E-mail confirmation window controller class
  * @author Infobezdar'
- * @version 1.0
+ * @version 1.1
  */
 public class EmailConfirmationController {
 
@@ -59,8 +59,7 @@ public class EmailConfirmationController {
             if (answer.equals("successful_sign_up")) {
                 ChangeWindow.changeWindowTo(sideBackground, "Sign_in.fxml");
             } else {
-                ExceptionBox.createExceptionBox(sideBackground,
-                        "                 Invalid secret code");
+                ExceptionBox.createExceptionBox(sideBackground, "Invalid secret code");
             }
         });
     }

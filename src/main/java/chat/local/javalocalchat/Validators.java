@@ -5,6 +5,10 @@ import javafx.scene.control.PasswordField;
 import java.util.regex.Pattern;
 
 
+/**
+ * @author Infobezdar'
+ * @version 0.1
+ */
 public class Validators {
 
     private static final Pattern RCF2822_MAIL_PATTERN = Pattern.compile(

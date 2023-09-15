@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e5a5097-b45a-48c3-afee-cd5511f54467" name="Changes" comment="InvalidConfirmationCodeException add">
+    <list default="true" id="4e5a5097-b45a-48c3-afee-cd5511f54467" name="Changes" comment="EmailValidator add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/EmailConfirmationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/EmailConfirmationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Validators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Validators.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694805929256</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="EmailValidator add">
+      <created>1694806575768</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1694806575768</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +207,7 @@
     <MESSAGE value="SignInController comments" />
     <MESSAGE value="SignUpController comments" />
     <MESSAGE value="InvalidDataException add and refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="InvalidDataException add and refactor" />
+    <MESSAGE value="EmailValidator add" />
+    <option name="LAST_COMMIT_MESSAGE" value="EmailValidator add" />
   </component>
 </project>
