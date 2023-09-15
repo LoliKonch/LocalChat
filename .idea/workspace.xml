@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e5a5097-b45a-48c3-afee-cd5511f54467" name="Changes" comment="InvalidConfirmationCodeException add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/EmailConfirmationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/EmailConfirmationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Validators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Validators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/customexceptions/InvalidConfirmationCodeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/customexceptions/InvalidDataException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,17 +40,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/ST/JavaLibs/pgplib/Library/pgplib-3.2.3.jar",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ST/JavaLibs/pgplib/Library/pgplib-3.2.3.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ST\5_S\JavaLocalChat\src\main\java\chat\local\javalocalchat" />
@@ -76,6 +73,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.Application" />
         <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
@@ -166,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694721335846</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="InvalidDataException add and refactor">
+      <created>1694805929256</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1694805929256</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,6 +198,7 @@
     <MESSAGE value="NewPasswordController comments" />
     <MESSAGE value="SignInController comments" />
     <MESSAGE value="SignUpController comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="SignUpController comments" />
+    <MESSAGE value="InvalidDataException add and refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="InvalidDataException add and refactor" />
   </component>
 </project>
