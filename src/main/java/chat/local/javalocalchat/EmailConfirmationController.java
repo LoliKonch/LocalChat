@@ -1,5 +1,6 @@
 package chat.local.javalocalchat;
 
+import customexceptions.InvalidConfirmationCodeException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -44,21 +45,20 @@ public class EmailConfirmationController {
         // The event listener for the send code button can open a Sign_in window
         sendConfirmationCodeButton.setOnAction(event ->{
 
-            if (confirmationCodeField.getText() != null && !confirmationCodeField.getText().trim().isEmpty()){
-
-                String secretCode = confirmationCodeField.getText();
+            try {
+                String secretCode = Validators.confirmationCodeValidator(confirmationCodeField);
                 Client.sendMessage(secretCode);
+            } catch (InvalidConfirmationCodeException e) {
+                ExceptionBox.createExceptionBox(sideBackground, e.getMessage());
+                return;
+            }
 
-                String answer = Client.waitMessage();
-                if (answer.equals("successful_sign_up")) {
-                    ChangeWindow.changeWindowTo(sideBackground, "Sign_in.fxml");
-                } else {
-                    ExceptionBox.createExceptionBox(sideBackground,
-                            "                 Invalid secret code");
-                }
+            String answer = Client.waitMessage();
+            if (answer.equals("successful_sign_up")) {
+                ChangeWindow.changeWindowTo(sideBackground, "Sign_in.fxml");
             } else {
                 ExceptionBox.createExceptionBox(sideBackground,
-                        "          All fields must be filled in");
+                        "                 Invalid secret code");
             }
         });
     }
