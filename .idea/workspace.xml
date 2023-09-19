@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e5a5097-b45a-48c3-afee-cd5511f54467" name="Changes" comment="Validators new ipValidator">
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/ForgotYourPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/ForgotYourPasswordController.java" afterDir="false" />
+    <list default="true" id="4e5a5097-b45a-48c3-afee-cd5511f54467" name="Changes" comment="ForgotYourPasswordController new validating methods">
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Client.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695106387788</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="ForgotYourPasswordController new validating methods">
+      <created>1695106827308</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1695106827308</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +245,7 @@
     <MESSAGE value="Validators new validators" />
     <MESSAGE value="SignUpController new data validation" />
     <MESSAGE value="Validators new ipValidator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validators new ipValidator" />
+    <MESSAGE value="ForgotYourPasswordController new validating methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="ForgotYourPasswordController new validating methods" />
   </component>
 </project>

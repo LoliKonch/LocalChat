@@ -18,6 +18,8 @@ public class Client {
     private static String password;
     private static String email;
     private static String IPAddress;
+    private static String confirmationCode;
+    private static String newPassword;
 
     public static void startClient() throws IOException {
         socket = new Socket(getIPAddress(), 9090);
@@ -142,6 +144,22 @@ public class Client {
 
     public static String getIPAddress() {
         return IPAddress;
+    }
+
+    public static String getConfirmationCode() {
+        return confirmationCode;
+    }
+
+    public static void setConfirmationCode(String confirmationCode) {
+        Client.confirmationCode = confirmationCode;
+    }
+
+    public static String getNewPassword() {
+        return newPassword;
+    }
+
+    public static void setNewPassword(String newPassword) {
+        Client.newPassword = newPassword;
     }
 
     public static void closeEverything() {
