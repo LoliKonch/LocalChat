@@ -1,5 +1,6 @@
 package chat.local.javalocalchat;
 
+import customexceptions.InvalidDataException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -54,29 +55,28 @@ public class NewPasswordController {
         // The event listener for the confirm new password button can open a Sign_in window
         setNewPasswordButton.setOnAction(event ->{
 
-            if (newPasswordField.getText() != null && !newPasswordField.getText().trim().isEmpty() &&
-                confirmNewPasswordField.getText() != null && !confirmNewPasswordField.getText().trim().isEmpty() &&
-                confirmationCodeField.getText() != null && !confirmationCodeField.getText().trim().isEmpty()) {
+            // Validating new password and confirmation code
+            try {
+                Client.setNewPassword(Validators.NewPasswordValidator(newPasswordField, confirmNewPasswordField));
+                Client.setConfirmationCode(Validators.confirmationCodeValidator(confirmationCodeField));
+            } catch (InvalidDataException e) {
+                ExceptionBox.createExceptionBox(sideBackground, e.getMessage());
+                return;
+            }
 
-                if (newPasswordField.getText().equals(confirmNewPasswordField.getText())) {
-                    // Send set new password request to server
-                    Client.sendMessage("new_password +" +
-                            "|" + Client.getUsername() +
-                            "|" + confirmNewPasswordField.getText().trim() +
-                            "|" + confirmationCodeField.getText().trim());
+            // Send set new password request to server
+            Client.sendMessage("new_password +" +
+                    "|" + Client.getUsername() +
+                    "|" + Client.getNewPassword() +
+                    "|" + Client.getConfirmationCode());
 
-                    String answer = Client.waitMessage();
-                    if (answer.equals("successful_password_recovery")) {
-                        ChangeWindow.changeWindowTo(sideBackground, "Sign_in.fxml");
-                    } else {
-                        ExceptionBox.createExceptionBox(sideBackground,
-                                "                 Invalid secret code");
-                    }
-                } else {
-                    ExceptionBox.createExceptionBox(sideBackground, "             Passwords must match");
-                }
+            // confirmation code authentication
+            String answer = Client.waitMessage();
+            if (answer.equals("successful_password_recovery")) {
+                ChangeWindow.changeWindowTo(sideBackground, "Sign_in.fxml");
             } else {
-                ExceptionBox.createExceptionBox(sideBackground, "          All fields must be filled in");
+                ExceptionBox.createExceptionBox(sideBackground,
+                        "                 Invalid secret code");
             }
         });
     }
