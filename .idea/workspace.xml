@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e5a5097-b45a-48c3-afee-cd5511f54467" name="Changes" comment="SignUpController new data validation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Validators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Validators.java" afterDir="false" />
+    <list default="true" id="4e5a5097-b45a-48c3-afee-cd5511f54467" name="Changes" comment="Validators new ipValidator">
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/ForgotYourPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/ForgotYourPasswordController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695105731452</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Validators new ipValidator">
+      <created>1695106387788</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1695106387788</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,6 +237,7 @@
     <MESSAGE value="Comments" />
     <MESSAGE value="Validators new validators" />
     <MESSAGE value="SignUpController new data validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="SignUpController new data validation" />
+    <MESSAGE value="Validators new ipValidator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validators new ipValidator" />
   </component>
 </project>
