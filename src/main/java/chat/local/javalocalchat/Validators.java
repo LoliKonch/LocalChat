@@ -19,11 +19,18 @@ public class Validators {
                     "@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])" +
                     "?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]" +
                     "?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\" +
-                    "\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])");
+                    "\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+))");
 
     private static final Pattern LOGIN_PATTERN = Pattern.compile("[a-zA-Z0-9_]");
 
     private static final Pattern PASSWORD_PATTERN = Pattern.compile("[a-zA-Z0-9_!@#$%]");
+
+    private static final Pattern IP_PATTERN = Pattern.compile(
+            "^(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\." +
+                    "(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\." +
+                    "(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\." +
+                    "(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+    );
 
     public static String confirmationCodeValidator(PasswordField confirmationCodeField) throws InvalidDataException {
         if (confirmationCodeField.getText() != null && !confirmationCodeField.getText().trim().isEmpty()){
@@ -63,6 +70,18 @@ public class Validators {
                 return passwordField.getText().trim();
             } else {
                 throw new InvalidDataException("Invalid Password");
+            }
+        } else {
+            throw new InvalidDataException("All fields must be filled in");
+        }
+    }
+
+    public static String ipValidator(TextField ipField) throws InvalidDataException {
+        if (ipField.getText() != null && !ipField.getText().trim().isEmpty()){
+            if (IP_PATTERN.matcher(ipField.getText()).matches()) {
+                return ipField.getText().trim();
+            } else {
+                throw new InvalidDataException("Invalid IP address");
             }
         } else {
             throw new InvalidDataException("All fields must be filled in");
