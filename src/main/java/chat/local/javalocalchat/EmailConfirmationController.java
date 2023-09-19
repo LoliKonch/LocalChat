@@ -47,12 +47,14 @@ public class EmailConfirmationController {
 
             // Validating and sending message
             try {
-                String secretCode = Validators.confirmationCodeValidator(confirmationCodeField);
-                Client.sendMessage(secretCode);
+                String confirmationCode = Validators.confirmationCodeValidator(confirmationCodeField);
+                Client.setConfirmationCode(confirmationCode);
             } catch (InvalidDataException e) {
                 ExceptionBox.createExceptionBox(sideBackground, e.getMessage());
                 return;
             }
+
+            Client.sendMessage(Client.getConfirmationCode());
 
             // Waiting to server reply
             String answer = Client.waitMessage();
