@@ -87,4 +87,21 @@ public class Validators {
             throw new InvalidDataException("All fields must be filled in");
         }
     }
+
+    public static String NewPasswordValidator(PasswordField newPasswordField, PasswordField confirmNewPasswordField) throws InvalidDataException {
+        if (newPasswordField.getText() != null && !newPasswordField.getText().trim().isEmpty() &&
+            confirmNewPasswordField.getText() != null && !confirmNewPasswordField.getText().trim().isEmpty()){
+            if (PASSWORD_PATTERN.matcher(newPasswordField.getText()).matches()) {
+                if (newPasswordField.getText().trim().equals(confirmNewPasswordField.getText().trim())) {
+                    return newPasswordField.getText().trim();
+                } else {
+                    throw new InvalidDataException("Passwords must match");
+                }
+            } else {
+                throw new InvalidDataException("Invalid Password");
+            }
+        } else {
+            throw new InvalidDataException("All fields must be filled in");
+        }
+    }
 }

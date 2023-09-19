@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e5a5097-b45a-48c3-afee-cd5511f54467" name="Changes" comment="ForgotYourPasswordController new validating methods">
-      <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Client.java" afterDir="false" />
+    <list default="true" id="4e5a5097-b45a-48c3-afee-cd5511f54467" name="Changes" comment="refactor">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/NewPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/NewPasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Validators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/chat/local/javalocalchat/Validators.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +215,21 @@
       <option name="project" value="LOCAL" />
       <updated>1695106827308</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Client confirmationCode and newPassword fields">
+      <created>1695107150283</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1695107150283</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactor">
+      <created>1695107280012</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1695107280012</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,6 +262,8 @@
     <MESSAGE value="SignUpController new data validation" />
     <MESSAGE value="Validators new ipValidator" />
     <MESSAGE value="ForgotYourPasswordController new validating methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="ForgotYourPasswordController new validating methods" />
+    <MESSAGE value="Client confirmationCode and newPassword fields" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>
